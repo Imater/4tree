@@ -15,10 +15,10 @@ module.exports = Object.assign({
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
   app: {
-    title: 'Relef',
-    description: 'Big distribution store',
+    title: '4tree',
+    description: 'Notes, tasks, mindmaps, cards and other productive tools',
     head: {
-      titleTemplate: '%s - Relef',
+      titleTemplate: '%s - 4tree',
       meta: [
         {name: 'description', content: 'Big distribution store'},
         {charset: 'utf-8'},
