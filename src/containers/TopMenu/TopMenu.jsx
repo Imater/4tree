@@ -16,21 +16,23 @@ class TopMenu extends Component {
   render() {
     const items = [
       {
-        link: '/',
         title: 'Home',
+        link: '/',
       },
       {
-        link: 'tasks',
         title: 'Tasks',
+        link: 'tasks',
       },
       {
-        link: 'notes',
         title: 'Notes',
+        link: 'notes',
       },
     ];
     return (
       <div className={styles.topMenu}>
-        <ul>
+        <ul style={{
+          background: '#AAA'
+        }}>
           {
             items.map(this.renderMenuItem)
           }
