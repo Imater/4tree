@@ -1,0 +1,8 @@
+<svg viewBox="0 0 18 13">
+    <path fill="currentColor" fill-rule="evenodd" d="M 14 13 C 16.21 13 18 11.21 18 9 C 15 9 13.5 9 10 9 C 10 11.21 11.79 13 14 13 Z M 14 13" />
+    <path fill="currentColor" fill-rule="evenodd" d="M 4 13 C 6.21 13 8 11.21 8 9 C 5 9 3.5 9 0 9 C 0 11.21 1.79 13 4 13 Z M 4 13" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="currentColor" fill="none" fill-rule="evenodd" d="M 10.5 9 L 14 4 L 17.5 9" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="currentColor" fill="none" fill-rule="evenodd" d="M 0.5 9 L 4 4 L 7.5 9" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="currentColor" fill="none" fill-rule="evenodd" d="M 4 2.5 L 9 1.5 L 14 2.5" />
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="currentColor" fill="#d8d8d8" fill-rule="evenodd" d="M 9 2.5 C 9.55 2.5 10 2.05 10 1.5 C 10 0.95 9.55 0.5 9 0.5 C 8.45 0.5 8 0.95 8 1.5 C 8 2.05 8.45 2.5 9 2.5 Z M 9 2.5" />
+</svg>

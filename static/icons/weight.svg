@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Avocode 2.6.0 - http://avocode.com -->
+<svg height="13" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13">
+    <path fill="#ff5b00" fill-rule="evenodd" d="M 14 12.5 C 16.21 12.5 18 10.71 18 8.5 C 15 8.5 13.5 8.5 10 8.5 C 10 10.71 11.79 12.5 14 12.5 Z M 14 12.5" />
+    <path fill="#ff5b00" fill-rule="evenodd" d="M 4 12.5 C 6.21 12.5 8 10.71 8 8.5 C 5 8.5 3.5 8.5 0 8.5 C 0 10.71 1.79 12.5 4 12.5 Z M 4 12.5" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="#ff5b00" fill="none" fill-rule="evenodd" d="M 10.5 8.5 L 14 3.5 L 17.5 8.5" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="#ff5b00" fill="none" fill-rule="evenodd" d="M 0.5 8.5 L 4 3.5 L 7.5 8.5" />
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="#ff5b00" fill="none" fill-rule="evenodd" d="M 4 2 L 9 1 L 14 2" />
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff5b00" fill="none" fill-rule="evenodd" d="M 9 2 C 9.55 2 10 1.55 10 1 C 10 0.45 9.55 0 9 0 C 8.45 0 8 0.45 8 1 C 8 1.55 8.45 2 9 2 Z M 9 2" />
+</svg>
