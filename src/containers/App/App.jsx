@@ -5,6 +5,7 @@ import { asyncConnect } from 'redux-async-connect';
 
 import { loadSettings, isLoaded as isSettingsLoaded } from 'redux/modules/settings';
 import config from '../../config';
+import TopMenu from '../TopMenu';
 
 import styles from './App.styl';
 
@@ -45,6 +46,7 @@ class App extends Component {
     return (
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
+        <TopMenu />
         {this.props.children}
       </div>
     );
