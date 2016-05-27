@@ -1,6 +1,7 @@
 const initialState = {
   data: {
-    sample: 'test'
+    sample: 'test',
+    hello: 'hi!!!',
   }
 };
 
