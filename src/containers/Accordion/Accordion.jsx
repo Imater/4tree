@@ -3,35 +3,17 @@ import { default as MyAccordion } from 'components/Accordion';
 
 export default class Accordion extends Component {
   state = {
-    items: [
-      {
-        title: 'First title',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quaerat corporis ipsum perspiciatis officia, magnam nisi eos libero eaque ex quas laborum?',
-        isOpened: false
-      },
-      {
-        title: 'Second title',
-        content: 'Nulla modi natus sunt molestiae voluptates, tenetur rem, id voluptatibus. Veritatis dolorem hic vel sunt qui quibusdam corporis.',
-        isOpened: false
-      },
-      {
-        title: 'Third title',
-        content: 'Illum nemo saepe ducimus architecto at porro sunt? Maiores quia sequi natus aperiam.',
-        isOpened: false
-      }
-    ]
+    openedItems: []
   };
 
   handleClick = (index) => () => {
-    const { items } = this.state;
+    const { openedItems } = this.state;
+
     this.setState({
-      items: [
-        ...items.slice(0, index),
-        {
-          ...items[index],
-          isOpened: !items[index].isOpened
-        },
-        ...items.slice(index + 1)
+      openedItems: [
+        ...openedItems.slice(0, index),
+        !openedItems[index],
+        ...openedItems.slice(index + 1)
       ]
     });
   };
@@ -42,7 +24,24 @@ export default class Accordion extends Component {
         <h1>
           Accordion
         </h1>
-        <MyAccordion items={this.state.items} handleClick={this.handleClick} />
+        <MyAccordion
+          items={[
+            {
+              title: 'First title',
+              content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quaerat corporis ipsum perspiciatis officia, magnam nisi eos libero eaque ex quas laborum?'
+            },
+            {
+              title: 'Second title',
+              content: 'Nulla modi natus sunt molestiae voluptates, tenetur rem, id voluptatibus. Veritatis dolorem hic vel sunt qui quibusdam corporis.'
+            },
+            {
+              title: 'Third title',
+              content: 'Illum nemo saepe ducimus architecto at porro sunt? Maiores quia sequi natus aperiam.'
+            }
+          ]}
+          openedItems={this.state.openedItems}
+          handleClick={this.handleClick}
+        />
       </div>
     );
   }

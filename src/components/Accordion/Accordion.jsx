@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './Accordion.styl';
 
-const Accordion = ({ items, handleClick }) => {
+const Accordion = ({ items, openedItems, handleClick }) => {
   return (
     <ul className={styles.accordion}>
       {items.map((item, index) => {
@@ -12,7 +12,7 @@ const Accordion = ({ items, handleClick }) => {
             <div
               className={classNames({
                 [styles.title]: true,
-                [styles.titleOpened]: item.isOpened
+                [styles.titleOpened]: openedItems[index]
               })}
               onClick={handleClick(index)}
             >
@@ -21,7 +21,7 @@ const Accordion = ({ items, handleClick }) => {
             <div
               className={styles.content}
               style={{
-                display: item.isOpened ? 'block' : 'none'
+                display: openedItems[index] ? 'block' : 'none'
               }}
             >
               {item.content}
