@@ -6,7 +6,7 @@ export default class Accordion extends Component {
     openedItems: []
   };
 
-  handleClick = (index) => () => {
+  toggleItem = (index) => () => {
     const { openedItems } = this.state;
 
     this.setState({
@@ -40,7 +40,7 @@ export default class Accordion extends Component {
             }
           ]}
           openedItems={this.state.openedItems}
-          handleClick={this.handleClick}
+          handleClick={this.toggleItem}
         />
       </div>
     );
