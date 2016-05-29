@@ -40,7 +40,7 @@ export default class Accordion extends Component {
             }
           ]}
           openedItems={this.state.openedItems}
-          handleClick={this.toggleItem}
+          onClick={this.toggleItem}
         />
       </div>
     );
