@@ -12,8 +12,6 @@
   width 25px
   height 25px
   background: #000
-
-.colorSelected
   position relative
 
   &:after
@@ -26,4 +24,11 @@
     top 0
     margin auto
     position absolute
+    opacity 0
     background url('../../../static/icons/arrow.png')
+    transition all .2s ease-in
+
+.colorSelected
+  &:after
+    opacity 1
+
