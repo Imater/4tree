@@ -11,8 +11,9 @@ class SelectColor extends Component {
   };
 
   selectColorByValue = index => {
-    const {value} = this.props;
-    return index === value ? styles.colorSelected : styles.color;
+    const { value } = this.props;
+    const { color, colorSelected } = styles;
+    return index === value ? colorSelected : color;
   };
 
   renderColor = (colors) => {

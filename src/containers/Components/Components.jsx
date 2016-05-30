@@ -8,20 +8,18 @@ class Components extends Component {
     currentColorIndex: 0
   };
   changeColor = (colorIndex) => () => {
-    console.log(colorIndex);
     this.setState({
       currentColorIndex: colorIndex
     });
   };
   render() {
+    const colors = ['#1abc9c', '#40d47e', '#3498db', '#9b59b6', '#e74c3c', '#ecf0f1', '#f1c40f', '#34495e'];
     return (
       <div className={styles.home}>
         <Helmet title='Components'/>
         <div className={styles.selectTitle}>Цвет:</div>
         <SelectColor
-          colors={
-            ['#1abc9c', '#40d47e', '#3498db', '#9b59b6', '#e74c3c', '#ecf0f1', '#f1c40f', '#34495e']
-          }
+          colors={colors}
           value={this.state.currentColorIndex}
           onChange={this.changeColor}/>
       </div>
