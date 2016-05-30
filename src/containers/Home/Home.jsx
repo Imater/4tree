@@ -8,6 +8,7 @@ class Home extends Component {
     currentColorIndex: 0
   };
   changeColor = (colorIndex) => () => {
+    console.log(colorIndex);
     this.setState({
       currentColorIndex: colorIndex
     });

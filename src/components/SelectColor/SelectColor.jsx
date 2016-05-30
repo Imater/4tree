@@ -26,13 +26,13 @@ class SelectColor extends Component {
   };
 
   render() {
-    const colors = this.props.colors;
+    const {colors, onChange} = this.props;
     return (
       <div className={styles.selectColor}>
         <div className={styles.colorBox}>
           {this.renderColor(colors)}
+          <ResetButton onChange={onChange}/>
         </div>
-        <ResetButton/>
       </div>
     );
   }
