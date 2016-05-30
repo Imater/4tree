@@ -4,6 +4,14 @@ import Helmet from 'react-helmet';
 import styles from './Home.styl';
 
 class Home extends Component {
+  state = {
+    currentColorIndex: 1
+  };
+  changeColor = (colorIndex) => {
+    this.setState({
+      currentColorIndex: colorIndex
+    });
+  };
   render() {
     return (
       <div className={styles.home}>
