@@ -11,8 +11,8 @@ class ResetButton extends Component {
     const { onChange } = this.props;
     return (
       <button className={styles.button}
-              onClick={onChange(undefined)}
-      ></button>
+              onClick={onChange(undefined)}>
+      </button>
     );
   }
 }

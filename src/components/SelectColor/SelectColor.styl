@@ -1,11 +1,29 @@
+.select
+  padding 5px
+  display inline-flex
+
 .colorBox
-  display flex
+  display inline-flex
+  overflow hidden
+  border-radius 2px
+
 .colorSelected,
 .color
-  width 30px
-  height 30px
+  width 25px
+  height 25px
   background: #000
 
 .colorSelected
+  position relative
+
   &:after
-    content 'v'
+    content ''
+    width: 16px
+    height: 16px
+    left 0
+    right 0
+    bottom 0
+    top 0
+    margin auto
+    position absolute
+    background url('../../../static/icons/arrow.png')
