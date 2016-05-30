@@ -30,6 +30,10 @@ class TopMenu extends Component {
       {
         title: 'Components',
         link: 'components',
+      },
+      {
+        title: 'DropDownTitle',
+        link: 'dropDownTitle'
       }
     ];
     return (
