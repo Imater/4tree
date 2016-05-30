@@ -1,4 +1,5 @@
 import React, { Component, PropTypes as pt} from 'react';
+import ResetButton from '../ResetButton/ResetButton';
 
 import styles from './SelectColor.styl';
 
@@ -24,7 +25,6 @@ class SelectColor extends Component {
     );
   };
 
-
   render() {
     const colors = this.props.colors;
     return (
@@ -32,6 +32,7 @@ class SelectColor extends Component {
         <div className={styles.colorBox}>
           {this.renderColor(colors)}
         </div>
+        <ResetButton/>
       </div>
     );
   }
