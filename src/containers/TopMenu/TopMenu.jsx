@@ -27,6 +27,10 @@ class TopMenu extends Component {
         title: 'Notes',
         link: 'notes',
       },
+      {
+        title: 'Components',
+        link: 'components',
+      }
     ];
     return (
       <div className={styles.topMenu}>

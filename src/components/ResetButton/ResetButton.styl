@@ -1,0 +1,28 @@
+.button
+  width 25px
+  height 25px
+  position relative
+  border none
+  background transparent
+
+  &:before,
+  &:after
+    content ' '
+    width 2px
+    height 12px
+    left 0
+    top 0
+    bottom 0
+    right 0
+    margin auto
+    position absolute
+    background-color #9b9696
+
+  &:before
+    transform rotate(45deg)
+
+  &:after
+    transform rotate(-45deg)
+
+  &:focus
+    outline none
