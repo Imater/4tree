@@ -9,11 +9,21 @@ class SelectColor extends Component {
     onChange: pt.func
   };
 
+  selectColorByValue = index => index === this.props.value ? styles.colorSelected : styles.color;
+
   renderColor = (colors) => {
     return colors.map(
-      color => <div className={styles.color} style={{backgroundColor: color}}></div>
+      (color, index) => {
+        return (
+          <div className={this.selectColorByValue(index)}
+               style={{backgroundColor: color}}
+               onClick={this.props.onChange(index)}
+          ></div>
+        );
+      }
     );
   };
+
 
   render() {
     const colors = this.props.colors;

@@ -5,9 +5,9 @@ import styles from './Home.styl';
 
 class Home extends Component {
   state = {
-    currentColorIndex: 1
+    currentColorIndex: 0
   };
-  changeColor = (colorIndex) => {
+  changeColor = (colorIndex) => () => {
     this.setState({
       currentColorIndex: colorIndex
     });
