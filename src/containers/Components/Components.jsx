@@ -13,7 +13,16 @@ class Components extends Component {
     });
   };
   render() {
-    const colors = ['#1abc9c', '#40d47e', '#3498db', '#9b59b6', '#e74c3c', '#ecf0f1', '#f1c40f', '#34495e'];
+    const colors = [
+      '#1abc9c',
+      '#40d47e',
+      '#3498db',
+      '#9b59b6',
+      '#e74c3c',
+      '#ecf0f1',
+      '#f1c40f',
+      '#34495e',
+    ];
     return (
       <div className={styles.home}>
         <Helmet title='Components'/>
@@ -21,7 +30,8 @@ class Components extends Component {
         <SelectColor
           colors={colors}
           value={this.state.currentColorIndex}
-          onChange={this.changeColor}/>
+          onChange={this.changeColor}
+        />
       </div>
     );
   }
