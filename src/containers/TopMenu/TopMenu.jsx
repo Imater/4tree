@@ -34,6 +34,10 @@ class TopMenu extends Component {
       {
         title: 'DropDownTitle',
         link: 'dropDownTitle'
+      },
+      {
+        title: 'TitleEditable',
+        link: 'titleEditable'
       }
     ];
     return (

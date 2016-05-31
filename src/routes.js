@@ -8,6 +8,7 @@ import Accordion from 'containers/Accordion';
 import NotFound from 'containers/NotFound';
 import Components from 'containers/Components';
 import DropDownTitle from 'containers/DropDownTitle';
+import TitleEditable from 'containers/TitleEditable';
 
 export default store => {
   /**
@@ -23,6 +24,7 @@ export default store => {
       <Route path="accordion" component={Accordion} />
       <Route path="components" component={Components}/>
       <Route path="dropDownTitle" component={DropDownTitle}/>
+      <Route path="titleEditable" component={TitleEditable}/>
       <Route path="*" component={NotFound} status={404} />
     </Route>
   );
