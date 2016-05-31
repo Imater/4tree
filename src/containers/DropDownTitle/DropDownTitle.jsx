@@ -4,24 +4,27 @@ import styles from './DropDownTitle.styl';
 
 
 class DropDownTitle extends Component {
-
-state = {
-  isOpen: false
-};
+  state = {
+    isOpen: false
+  };
 
   render() {
-    const isOpen = this.state.isOpen;
+    const { isOpen } = this.state;
     return (
-        <div
+      <div
         className={styles.dropdown}
         onClick={() => {
           this.setState({
             isOpen: !isOpen
           });
         }}
-        >Dropdowntext
-        <div className={styles.dropdownTriangle + (isOpen ? ' ' : ' ' + styles.rotated)}></div>
+      >
+        Dropdowntext
+        <div
+          className={`${styles.dropdownTriangle} ${isOpen ? '' : styles.rotated}`}
+        >
         </div>
+      </div>
     );
   }
 }
