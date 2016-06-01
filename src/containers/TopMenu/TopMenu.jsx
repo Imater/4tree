@@ -37,8 +37,12 @@ class TopMenu extends Component {
       },
       {
         title: 'TitleEditable',
-        link: 'titleEditable'
-      }
+        link: 'titleEditable',
+      },
+      {
+        title: 'IconTabs',
+        link: 'iconTabs'
+      },
     ];
     return (
       <div className={styles.topMenu}>

@@ -9,6 +9,7 @@ import NotFound from 'containers/NotFound';
 import Components from 'containers/Components';
 import DropDownTitle from 'containers/DropDownTitle';
 import TitleEditable from 'containers/TitleEditable';
+import IconTabs from 'containers/IconTabs';
 
 export default store => {
   /**
@@ -25,6 +26,7 @@ export default store => {
       <Route path="components" component={Components}/>
       <Route path="dropDownTitle" component={DropDownTitle}/>
       <Route path="titleEditable" component={TitleEditable}/>
+      <Route path="iconTabs" component={IconTabs}/>
       <Route path="*" component={NotFound} status={404} />
     </Route>
   );
