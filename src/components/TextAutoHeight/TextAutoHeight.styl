@@ -1,0 +1,34 @@
+.select
+  margin 10px
+  display inline-flex
+
+.colorBox
+  display inline-flex
+  overflow hidden
+  border-radius 2px
+
+.colorSelected,
+.color
+  width 25px
+  height 25px
+  background: #000
+  position relative
+
+  &:after
+    content ''
+    width: 16px
+    height: 16px
+    left 0
+    right 0
+    bottom 0
+    top 0
+    margin auto
+    position absolute
+    opacity 0
+    background url('../../../static/icons/arrow.png')
+    transition all .2s ease-in
+
+.colorSelected
+  &:after
+    opacity 1
+
