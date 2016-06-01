@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 import styles from './TitleEditable.styl';
 
@@ -7,11 +8,19 @@ state = {
   isEdit: false
 };
 
+componentDidUpdate() {
+  const input = ReactDOM.findDOMNode(this.refs.myInput);
+  if (input) {
+    input.focus();
+  }
+}
+
 render() {
   const { isEdit } = this.state;
   return (
 this.state.isEdit ? (
 <input
+ref="myInput"
 onBlur = { () => {
   this.setState({
     isEdit: !isEdit
