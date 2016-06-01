@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import styles from './Accordion.styl';
 
@@ -8,12 +7,9 @@ const Accordion = ({ items, openedItems, onClick }) => {
     <ul className={styles.accordion}>
       {items.map((item, index) => {
         return (
-          <li className={styles.item}>
+          <li className={styles.item} key={index}>
             <div
-              className={classNames({
-                [styles.title]: true,
-                [styles.titleOpened]: openedItems[index]
-              })}
+              className={openedItems[index] ? styles.titleOpened : styles.title}
               onClick={() => {
                 onClick(index);
               }}
