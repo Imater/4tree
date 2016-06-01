@@ -6,7 +6,7 @@ export default class Accordion extends Component {
     openedItems: []
   };
 
-  toggleItem = (index) => () => {
+  toggleItem = (index) => {
     const { openedItems } = this.state;
 
     this.setState({
@@ -28,7 +28,11 @@ export default class Accordion extends Component {
           items={[
             {
               title: 'First title',
-              content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quaerat corporis ipsum perspiciatis officia, magnam nisi eos libero eaque ex quas laborum?'
+              content: (
+                <div>
+                  <h2>Hello</h2>
+                </div>
+              )
             },
             {
               title: 'Second title',

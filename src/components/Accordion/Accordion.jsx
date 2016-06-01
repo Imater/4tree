@@ -14,7 +14,9 @@ const Accordion = ({ items, openedItems, onClick }) => {
                 [styles.title]: true,
                 [styles.titleOpened]: openedItems[index]
               })}
-              onClick={onClick(index)}
+              onClick={() => {
+                onClick(index);
+              }}
             >
               {item.title}
             </div>
