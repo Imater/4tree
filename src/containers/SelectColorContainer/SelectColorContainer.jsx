@@ -2,9 +2,9 @@ import React, { Component} from 'react';
 import Helmet from 'react-helmet';
 import SelectColor from '../../components/SelectColor/';
 import TextAutoHeight from '../../components/TextAutoHeight/';
-import styles from './Components.styl';
+import styles from './SelectColorContainer.styl';
 
-class Components extends Component {
+class SelectColorContainer extends Component {
   state = {
     currentColorIndex: 0,
     text: 'Sample Text'
@@ -18,7 +18,7 @@ class Components extends Component {
     const colors = ['#1abc9c', '#40d47e', '#3498db', '#9b59b6', '#e74c3c', '#ecf0f1', '#f1c40f', '#34495e'];
     return (
       <div className={styles.home}>
-        <Helmet title='Components'/>
+        <Helmet title='SelectColor Container'/>
         <div className={styles.selectTitle}>Цвет:</div>
         <SelectColor
           colors={colors}
@@ -41,4 +41,4 @@ class Components extends Component {
   }
 }
 
-export default Components;
+export default SelectColorContainer;

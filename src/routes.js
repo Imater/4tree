@@ -6,7 +6,7 @@ import Tasks from 'containers/Tasks';
 import Notes from 'containers/Notes';
 import Accordion from 'containers/Accordion';
 import NotFound from 'containers/NotFound';
-import Components from 'containers/Components';
+import SelectColorContainer from 'containers/SelectColorContainer';
 import DropDownTitle from 'containers/DropDownTitle';
 import TitleEditable from 'containers/TitleEditable';
 import IconTabs from 'containers/IconTabs';
@@ -23,7 +23,7 @@ export default store => {
       <Route path="tasks" component={Tasks}/>
       <Route path="notes" component={Notes}/>
       <Route path="accordion" component={Accordion} />
-      <Route path="components" component={Components}/>
+      <Route path="selectcolor" component={SelectColorContainer}/>
       <Route path="dropDownTitle" component={DropDownTitle}/>
       <Route path="titleEditable" component={TitleEditable}/>
       <Route path="iconTabs" component={IconTabs}/>

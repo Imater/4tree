@@ -28,8 +28,8 @@ class TopMenu extends Component {
         link: 'notes',
       },
       {
-        title: 'Components',
-        link: 'components',
+        title: 'SelectColor',
+        link: 'selectcolor',
       },
       {
         title: 'DropDownTitle',
