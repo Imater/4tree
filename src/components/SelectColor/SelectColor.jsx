@@ -16,17 +16,18 @@ class SelectColor extends Component {
     return index === value ? colorSelected : color;
   };
 
-  renderColor = (colors) => {
-    return colors.map(
-      (color, index) => {
-        return (
-          <div className={this.selectColorByValue(index)}
-               style={{backgroundColor: color}}
-               onClick={this.props.onChange(index)}>
-          </div>
-        );
-      }
+  renderColor = (color, index) => {
+    return (
+      <div className={this.selectColorByValue(index)}
+           key={index}
+           style={{backgroundColor: color}}
+           onClick={this.props.onChange(index)}>
+      </div>
     );
+  };
+
+  renderColors = (colors) => {
+    return colors.map((color, index) => this.renderColor(color, index));
   };
 
   render() {
@@ -34,7 +35,7 @@ class SelectColor extends Component {
     return (
       <div className={styles.select}>
         <div className={styles.colorBox}>
-          {this.renderColor(colors)}
+          {this.renderColors(colors)}
         </div>
         <ResetButton onChange={onChange}/>
       </div>
