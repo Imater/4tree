@@ -10,9 +10,8 @@ const LOAD_FAIL = 'relef/settings/LOAD_FAIL';
 const SET_TAB_ACTIVE_INDEX = '4tree/settings/SET_TAB_ACTIVE_INDEX';
 
 const initialState = {
-  loaded: false,
-  tabActiveIndex: 0,
-  tabs: ['Оформление', 'Проект', 'Обзор', 'Счетчики', 'Поделиться']
+  currentColorIndex: 0,
+  colors: ['Оформление', 'Проект', 'Обзор', 'Счетчики', 'Поделиться']
 };
 
 const fetchSettings = () => {
