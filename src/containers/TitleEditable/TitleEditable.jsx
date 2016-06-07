@@ -3,13 +3,23 @@ import { default as EditableTitle } from 'components/TitleEditable';
 
 export default class TitleEditable extends Component {
   state = {
-    isEdit: false
+    value: 'sample text',
   };
 
   render() {
     return (
       <div>
-        <EditableTitle />
+        <EditableTitle
+          value={this.state.value}
+          onChange={(newValue) => {
+            this.setState({
+              value: newValue,
+            });
+          }}
+        />
+        <div>
+          text: {this.state.value}
+        </div>
       </div>
     );
   }
