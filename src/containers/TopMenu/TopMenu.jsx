@@ -45,7 +45,11 @@ class TopMenu extends Component {
       },
       {
         title: 'Accordion',
-        link: 'accordion'
+        link: 'accordion',
+      },
+      {
+        title: 'Loader',
+        link: 'Loader'
       },
     ];
     return (
