@@ -1,0 +1,15 @@
+.loader
+    width 50px
+    height 50px
+    background-color blue
+    cursor pointer
+
+.loaderActive
+    composes loader
+    animation load .5s .3s infinite
+
+@keyframes load
+    from
+        transform rotateY(0)
+    to
+        transform rotateY(360deg)

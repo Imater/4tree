@@ -43,6 +43,14 @@ class TopMenu extends Component {
         title: 'IconTabs',
         link: 'iconTabs'
       },
+      {
+        title: 'Accordion',
+        link: 'accordion',
+      },
+      {
+        title: 'Loader',
+        link: 'Loader'
+      },
     ];
     return (
       <div className={styles.topMenu}>

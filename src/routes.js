@@ -10,6 +10,7 @@ import SelectColorContainer from 'containers/SelectColorContainer';
 import DropDownTitle from 'containers/DropDownTitle';
 import TitleEditable from 'containers/TitleEditable';
 import IconTabs from 'containers/IconTabs';
+import Loader from 'containers/Loader';
 
 export default store => {
   /**
@@ -27,6 +28,7 @@ export default store => {
       <Route path="dropDownTitle" component={DropDownTitle}/>
       <Route path="titleEditable" component={TitleEditable}/>
       <Route path="iconTabs" component={IconTabs}/>
+      <Route path="loader" component={Loader}/>
       <Route path="*" component={NotFound} status={404} />
     </Route>
   );

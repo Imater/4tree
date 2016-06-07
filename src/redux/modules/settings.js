@@ -7,11 +7,8 @@ const LOAD = 'relef/settings/LOAD';
 const LOAD_SUCCESS = 'relef/settings/LOAD_SUCCESS';
 const LOAD_FAIL = 'relef/settings/LOAD_FAIL';
 
-const SET_TAB_ACTIVE_INDEX = '4tree/settings/SET_TAB_ACTIVE_INDEX';
-
 const initialState = {
-  currentColorIndex: 0,
-  colors: ['Оформление', 'Проект', 'Обзор', 'Счетчики', 'Поделиться']
+  loaded: false,
 };
 
 const fetchSettings = () => {
@@ -59,12 +56,6 @@ const settings = handleActions({
       ])
     );
   },
-
-  [SET_TAB_ACTIVE_INDEX]: (state, action) => ({
-    ...state,
-    tabActiveIndex: action.payload.newTabActiveIndex,
-    pathnameForMe: action.payload.pathname,
-  }),
 }, initialState);
 
 export default settings;
@@ -77,15 +68,5 @@ export function isLoaded(globalState) {
 export const loadSettings = () => {
   return {
     type: LOAD,
-  };
-};
-
-export const setTabActiveIndex = (newTabActiveIndex, pathname) => {
-  return {
-    type: SET_TAB_ACTIVE_INDEX,
-    payload: {
-      newTabActiveIndex: newTabActiveIndex,
-      pathname: pathname,
-    }
   };
 };
