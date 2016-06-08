@@ -26,8 +26,7 @@ class TitleEditable extends Component {
   }
 
   componentDidUpdate = () => {
-    const inputElement = this.refs.myInput;
-    inputElement.focus();
+    if (this.myInput) this.myInput.focus();
   }
 
   render() {
@@ -37,7 +36,7 @@ class TitleEditable extends Component {
       isEdit ? (
         <input className={styles.input}
           onChange={this.onTextChange}
-          ref='myInput'
+          ref={(ref) => this.myInput = ref}
           value={value}
           onBlur = { () => {
             this.setState({
