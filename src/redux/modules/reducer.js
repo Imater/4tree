@@ -4,16 +4,18 @@ import { reducer as reduxAsyncConnect } from 'redux-async-connect';
 
 import settings from './settings';
 import selectColor from './selectColor';
-import accordion from './accordion.js';
+import nodes from './nodes';
+import accordion from './accordion';
 import iconTabs from './iconTabs';
 
 const reducers = combineReducers({
-  reduxAsyncConnect,
-  settings,
-  selectColor,
-  iconTabs,
-  routing,
   accordion,
+  iconTabs,
+  nodes,
+  reduxAsyncConnect,
+  routing,
+  selectColor,
+  settings,
 });
 
 export default reducers;

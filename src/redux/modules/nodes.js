@@ -3,14 +3,21 @@ import {loop, Effects} from 'redux-loop';
 
 import client from '../../helpers/apiClient';
 
-const load = createAction('relef/products/LOAD');
-const loadSuccess = createAction('relef/products/LOAD_SUCCESS');
-const loadFail = createAction('relef/products/LOAD_FAIL');
+export const load = createAction('relef/nodes/LOAD');
+const loadSuccess = createAction('relef/nodes/LOAD_SUCCESS');
+const loadFail = createAction('relef/nodes/LOAD_FAIL');
 
-const fetchProducts =
+const fetchNodes =
   () =>
-    client.get(`/loadProducts`)
-      .then(loadSuccess, loadFail);
+    client.get(`/loadNodes`)
+      .then(loadSuccess)
+      .catch(loadFail);
+
+const waitMe = () => new Promise(resolve => {
+  setTimeout(() => {
+    resolve();
+  }, 1000);
+});
 
 const handleLoad = state => (
   loop({
@@ -18,7 +25,10 @@ const handleLoad = state => (
     loaded: false,
     loading: true
   },
-  Effects.promise(fetchProducts)
+  Effects.batch([
+    Effects.promise(fetchNodes),
+    Effects.promise(waitMe),
+  ])
   )
 );
 
@@ -26,7 +36,7 @@ const handleLoadSuccess = (state, payload) => ({
   ...state,
   loaded: true,
   loading: false,
-  data: payload.data.data
+  data: payload.data
 });
 
 const handleLoadFail = (state, payload) => ({
@@ -43,9 +53,8 @@ const reducer = createReducer(on => {
 }, {});
 
 export function isLoaded(globalState) {
-  return globalState.settings && globalState.settings.loaded;
+  return globalState.nodes && globalState.nodes.loaded;
 }
 
 export default reducer;
-export {load};
 

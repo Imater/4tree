@@ -7,7 +7,7 @@ function baseUrl() {
     return 'http://' + config.apiHost + ':' + config.apiPort;
   }
   // Prepend `/api` to relative URL, to proxy to API server.
-  return '/';
+  return '/api';
 }
 axios.defaults.baseURL = baseUrl();
 
