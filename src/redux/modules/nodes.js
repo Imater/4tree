@@ -13,12 +13,6 @@ const fetchNodes =
       .then(loadSuccess)
       .catch(loadFail);
 
-const waitMe = () => new Promise(resolve => {
-  setTimeout(() => {
-    resolve();
-  }, 1000);
-});
-
 const handleLoad = state => (
   loop({
     ...state,
@@ -27,7 +21,6 @@ const handleLoad = state => (
   },
   Effects.batch([
     Effects.promise(fetchNodes),
-    Effects.promise(waitMe),
   ])
   )
 );
