@@ -1,8 +1,14 @@
 const initialState = {
   nodes: {
+    '0': {
+      id: '0',
+      title: 'Дневник',
+      parentId: '-1',
+    },
     '1': {
       id: '1',
       title: 'node 1',
+      parentId: '0',
     },
     '2': {
       id: '2',
@@ -12,6 +18,7 @@ const initialState = {
     '3': {
       id: '3',
       title: 'node 2',
+      parentId: '0',
     },
     '4': {
       id: '4',
