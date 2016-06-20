@@ -29,7 +29,7 @@ class Notes extends Component {
   render() {
     return (
       <div className={styles.notes}>
-        <Node parentId={'0'} />
+        <Node nodeStateId={'#1'} parentId={'0'} />
         <div style={{
           background: '#EEE',
           padding: 20
