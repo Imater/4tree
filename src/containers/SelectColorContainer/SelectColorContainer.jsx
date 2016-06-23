@@ -3,7 +3,7 @@ import React, { Component, PropTypes} from 'react';
 import Helmet from 'react-helmet';
 import { setColorIndex } from 'redux/modules/selectColor';
 
-import SelectColor from '../../components/SelectColor/';
+import SelectColor from 'components/SelectColor/';
 
 import TextAutoHeight from '../../components/TextAutoHeight/';
 import styles from './SelectColorContainer.styl';

@@ -7,13 +7,15 @@ import { expand } from 'redux/modules/nodeState';
 import styles from './Node.styl';
 
 @connect(
-  ({ nodes, nodeState }) => ({ nodes, nodeState }),
+  ({ nodes, nodeState, nodeProperty, selectColor }) => ({ nodes, nodeState, nodeProperty, selectColor }),
 )
 class Node extends Component {
   static propTypes = {
     nodes: PropTypes.object,
     nodeState: PropTypes.object,
+    nodeProperty: PropTypes.object,
     nodeStateId: PropTypes.string,
+    selectColor: PropTypes.object,
     dispatch: PropTypes.func,
     parentId: PropTypes.string,
   };
@@ -29,7 +31,7 @@ class Node extends Component {
     }));
   }
   render() {
-    const { nodes, nodeState, parentId, nodeStateId, dispatch } = this.props;
+    const { nodes, nodeState, parentId, nodeStateId, dispatch, selectColor, selectColor: { colors }, nodeProperty } = this.props;
     const nodesArray = Object.keys(nodes.data.nodes).map(keyName => (
       nodes.data.nodes[keyName]
     ));
@@ -39,15 +41,23 @@ class Node extends Component {
       ? nodeState[nodeStateId][node.id]
       : {};
 
+    const currentColorIndex = nodeProperty[node.id] ? nodeProperty[node.id].color : undefined;
+    const color = colors[currentColorIndex];
+
     return (
       <li className={styles.notes}>
         {
           !!childNodes.length &&
-            <button
+            <span
+              style={{
+                display: 'inline-block',
+                background: color,
+                width: 15,
+              }}
               onClick={this.expand(node.id)}
             >
               >
-            </button>
+            </span>
         }
         <Link to={{
           pathname: `/notes/${node.id}`,
@@ -63,6 +73,8 @@ class Node extends Component {
                     <Node
                       nodeState={nodeState}
                       dispatch={dispatch}
+                      selectColor={selectColor}
+                      nodeProperty={nodeProperty}
                       nodeStateId={nodeStateId}
                       nodes={nodes}
                       key={key}

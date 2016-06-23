@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { asyncConnect } from 'redux-async-connect';
+import { Table, Tr, Td } from 'components/Table';
 
 import Node from 'containers/Node';
 import { load as loadNodes, isLoaded as isNodesLoaded } from 'redux/modules/nodes';
@@ -29,13 +30,16 @@ class Notes extends Component {
   render() {
     return (
       <div className={styles.notes}>
-        <Node nodeStateId={'#1'} parentId={'0'} />
-        <div style={{
-          background: '#EEE',
-          padding: 20
-        }}>
-          {this.props.children}
-        </div>
+        <Table>
+          <Tr>
+            <Td width={'50%'}>
+              <Node nodeStateId={'#1'} parentId={'0'} />
+            </Td>
+            <Td>
+              {this.props.children}
+            </Td>
+          </Tr>
+        </Table>
       </div>
     );
   }

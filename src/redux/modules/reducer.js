@@ -6,6 +6,7 @@ import settings from './settings';
 import selectColor from './selectColor';
 import nodes from './nodes';
 import nodeState from './nodeState';
+import nodeProperty from './nodeProperty';
 import accordion from './accordion';
 import iconTabs from './iconTabs';
 
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   iconTabs,
   nodes,
   nodeState,
+  nodeProperty,
   reduxAsyncConnect,
   routing,
   selectColor,
