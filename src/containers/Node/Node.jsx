@@ -43,30 +43,39 @@ class Node extends Component {
 
     const currentColorIndex = nodeProperty[node.id] ? nodeProperty[node.id].color : undefined;
     const color = colors[currentColorIndex];
+    const icon = 'fa fa-map';
 
     return (
-      <li className={styles.notes}>
+      <li className={styles.node}>
+        <div className={styles.arrow}>
+          {
+            !!childNodes.length &&
+              <i
+                className={`fa ${currentNodeState.expanded ? 'fa-caret-down' : 'fa-caret-right'}`}
+                onClick={this.expand(node.id)}
+              />
+          }
+        </div>
         {
-          !!childNodes.length &&
-            <span
+            <div
+              className={styles.box}
               style={{
-                display: 'inline-block',
-                background: color,
-                width: 15,
+                backgroundColor: color,
               }}
-              onClick={this.expand(node.id)}
             >
-              >
-            </span>
+              <i className={`${styles.icon} ${icon}`} />
+            </div>
         }
         <Link to={{
           pathname: `/notes/${node.id}`,
         }}>
-          <span>{node.title}</span>
+          <span className={styles.title}>
+            { node.title }
+          </span>
         </Link>
         {
           currentNodeState.expanded &&
-            <ul>
+            <ul className={styles.list}>
               {
                 childNodes.map((item, key) => {
                   return (

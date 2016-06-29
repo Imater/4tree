@@ -33,10 +33,16 @@ class Notes extends Component {
         <Table>
           <Tr>
             <Td width={'50%'}>
-              <Node nodeStateId={'#1'} parentId={'0'} />
+              <div className={styles.panel}>
+                <ul>
+                  <Node nodeStateId={'#1'} parentId={'0'} />
+                </ul>
+              </div>
             </Td>
             <Td>
-              {this.props.children}
+              <div className={styles.panel}>
+                {this.props.children}
+              </div>
             </Td>
           </Tr>
         </Table>

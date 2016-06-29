@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 import { asyncConnect } from 'redux-async-connect';
 
 import { loadSettings, isLoaded as isSettingsLoaded } from 'redux/modules/settings';
-import config from '../../config';
-import TopMenu from '../TopMenu';
+import config from 'config';
+import TopMenu from 'containers/TopMenu';
 
 import styles from './App.styl';
 

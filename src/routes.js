@@ -1,6 +1,6 @@
 import React from 'react';
 import {IndexRoute, Route} from 'react-router';
-import App from 'containers/App';
+import App from 'pages/App';
 import Home from 'containers/Home';
 import Tasks from 'containers/Tasks';
 import Notes from 'containers/Notes';

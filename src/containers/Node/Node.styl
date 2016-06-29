@@ -1,3 +1,41 @@
-.notes {
+$box = 30px;
+
+.node {
   color: green;
+  vertical-align: middle;
 }
+
+.list {
+  margin-left: $box;
+  margin-bottom: ($box / 3);
+}
+
+.commonBox {
+  display: inline-block;
+  width: $box;
+  height: $box;
+  line-height: $box;
+  text-align: center;
+}
+
+.arrow {
+  composes: commonBox;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.box {
+  composes: commonBox;
+  vertical-align: middle;
+  background-color: #DADADA;
+}
+
+.icon {
+  color: gray;
+  opacity: 0.5;
+}
+
+.title {
+  padding: 0 ($box / 2);
+}
+
