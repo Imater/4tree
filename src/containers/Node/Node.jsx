@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { routeActions } from 'react-router-redux';
 import { expand } from 'redux/modules/nodeState';
+import Icon from 'components/Icon';
 
 import styles from './Node.styl';
 
@@ -43,7 +44,7 @@ class Node extends Component {
 
     const currentColorIndex = nodeProperty[node.id] ? nodeProperty[node.id].color : undefined;
     const color = colors[currentColorIndex];
-    const icon = 'fa fa-map';
+    const icon = nodeProperty[node.id] ? nodeProperty[node.id].icon : 'circle';
 
     return (
       <li className={styles.node}>
@@ -63,7 +64,7 @@ class Node extends Component {
                 backgroundColor: color,
               }}
             >
-              <i className={`${styles.icon} ${icon}`} />
+              <Icon name={icon} />
             </div>
         }
         <Link to={{

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { asyncConnect } from 'redux-async-connect';
 import { Table, Tr, Td } from 'components/Table';
 import SelectColor from 'components/SelectColor';
+import Icons from 'containers/Icons';
 import { set as setProperty } from 'redux/modules/nodeProperty';
 import { load as loadNodes, isLoaded as isNodesLoaded } from 'redux/modules/nodes';
 
@@ -48,15 +49,29 @@ export default class PropertyPanel extends Component {
     }));
   }
 
+  handleChangeIcon = (iconName) => {
+    const { params: { id } } = this.props;
+    this.props.dispatch(setProperty({
+      id,
+      propertyName: 'icon',
+      value: iconName,
+    }));
+  }
+
   render() {
     const { params: { id }, selectColor: { colors }, nodeProperty } = this.props;
     const currentColorIndex = nodeProperty[id] ? nodeProperty[id].color : undefined;
+    const currentIcon = nodeProperty[id] ? nodeProperty[id].icon : undefined;
 
     return (
       <div className={styles.notes}>
         <Table>
           <Tr>
-            <Td>Selected node: {id}</Td>
+            <Td>
+              <Icons value={currentIcon}
+                onChange={this.handleChangeIcon}
+              />
+            </Td>
           </Tr>
           <Tr>
             <Td>

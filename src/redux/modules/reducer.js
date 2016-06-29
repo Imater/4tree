@@ -5,6 +5,7 @@ import { reducer as reduxAsyncConnect } from 'redux-async-connect';
 import settings from './settings';
 import selectColor from './selectColor';
 import nodes from './nodes';
+import iconsStore from './iconsStore';
 import nodeState from './nodeState';
 import nodeProperty from './nodeProperty';
 import accordion from './accordion';
@@ -15,6 +16,7 @@ const reducers = combineReducers({
   iconTabs,
   nodes,
   nodeState,
+  iconsStore,
   nodeProperty,
   reduxAsyncConnect,
   routing,
