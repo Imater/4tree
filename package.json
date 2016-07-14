@@ -129,6 +129,7 @@
     "passport-github2": "^0.1.9",
     "piping": "^0.3.0",
     "pretty-error": "^1.2.0",
+    "promise-waterfall": "0.1.0",
     "pure-render-decorator": "^0.2.0",
     "querystring": "^0.2.0",
     "ramda": "^0.21.0",

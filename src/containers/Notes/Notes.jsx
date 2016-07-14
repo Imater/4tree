@@ -4,6 +4,7 @@ import { Table, Tr, Td } from 'components/Table';
 
 import Node from 'containers/Node';
 import { load as loadNodes, isLoaded as isNodesLoaded } from 'redux/modules/nodes';
+import { load as loadTasks, isLoaded as isTasksLoaded } from 'redux/modules/tasks';
 
 import styles from './Notes.styl';
 
@@ -18,6 +19,10 @@ import styles from './Notes.styl';
 
     if (!isNodesLoaded(getState())) {
       promises.push(dispatch(loadNodes()));
+    }
+
+    if (!isTasksLoaded(getState())) {
+      promises.push(dispatch(loadTasks()));
     }
 
     return Promise.all(promises);
